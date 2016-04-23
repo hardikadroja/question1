@@ -1,0 +1,9 @@
+{
+  "name":"Node.js Getting Started",
+  "description" : "First Node Application",
+  "repository": "https://github.com/hardikadroja/question1.git",   
+  "logo":"",
+  "keywords": ["node","express","static"],
+  "image": "heroku/nodejs"
+  
+}
