@@ -1,0 +1,30 @@
+<div class="page-header">
+  <div class="pull-left">
+     <h1 style="margin-top:-8px;">Give Your Opinion</h1>
+  </div>
+  <div class="pull-right">
+		<a href="#/new" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> New Question</a>
+  </div>
+  <div class="clearfix"></div>
+	
+</div>
+<div class="row">
+	<div class="col-xs-5 pull-right">
+		<input type="text" class="form-control" ng-model="query" placeholder="Search Question">
+	</div>
+    <div class="clearfix"></div>
+</div>
+<div class="row">
+	<div class="col-xs-12"><hr></div>
+</div>
+<div class="row" ng-switch on="polls.length">
+	<ul ng-switch-when="0">
+		<li><em>No Question in databases. Would you like to <a href="#/new">Add New</a>?</li>
+	</ul>
+	<ul ng-switch-default>
+		<li ng-repeat="poll in polls | filter:query">
+			<a style="background-color:#4cae4c;color:#FFF;padding:5px;margin:5px;line-height:2;border-radius:5px;" href="#/poll/{{poll._id}}">{{poll.question}}</a>
+		</li>
+	</ul>
+</div>
+<p>&nbsp;</p>
